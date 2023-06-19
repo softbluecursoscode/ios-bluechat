@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bluechat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLQ-Eu-fCj">
+                                <rect key="frame" x="20" y="20" width="125" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldReturn:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="DnK-ZP-NtI"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMW-Rt-9KN">
+                                <rect key="frame" x="153" y="20" width="125" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="textFieldReturn:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="JYJ-8K-ikO"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fue-C3-fsk">
+                                <rect key="frame" x="20" y="58" width="33" height="30"/>
+                                <state key="normal" title="Criar"/>
+                                <connections>
+                                    <action selector="btCreateProfile" destination="BYZ-38-t0r" eventType="touchUpInside" id="IM0-v6-D8L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UD-gL-V5a">
+                                <rect key="frame" x="129" y="58" width="42" height="30"/>
+                                <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <action selector="btGetMessages" destination="BYZ-38-t0r" eventType="touchUpInside" id="C4W-sn-4qI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msA-6e-LXH">
+                                <rect key="frame" x="248" y="58" width="30" height="30"/>
+                                <state key="normal" title="Sair"/>
+                                <connections>
+                                    <action selector="btLogout" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hv-0z-3JZ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qrq-BC-NgN">
+                                <rect key="frame" x="20" y="91" width="258" height="111"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a sua mensagem..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cB-CJ-ucr">
+                                <rect key="frame" x="20" y="215" width="258" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldReturn:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="CjZ-dA-oJe"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7h-IP-tlj">
+                                <rect key="frame" x="20" y="261" width="258" height="30"/>
+                                <state key="normal" title="Enviar mensagem"/>
+                                <connections>
+                                    <action selector="btSendMessage" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHS-Dz-57S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXx-Dd-9jH">
+                                <rect key="frame" x="20" y="294" width="258" height="30"/>
+                                <state key="normal" title="Todos"/>
+                                <connections>
+                                    <action selector="btSelectUser" destination="BYZ-38-t0r" eventType="touchUpInside" id="6jk-y1-bph"/>
+                                </connections>
+                            </button>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Qio-aH-fhh">
+                                <rect key="frame" x="29" y="332" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="whA-qo-Qnu"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="coX-hP-m4e"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="backgroundTouch" destination="BYZ-38-t0r" eventType="touchDown" id="sQu-7S-Yg9"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="formButtonCreate" destination="Fue-C3-fsk" id="5YD-Bz-LyL"/>
+                        <outlet property="formButtonLogin" destination="2UD-gL-V5a" id="bsi-LK-vpB"/>
+                        <outlet property="formButtonLogout" destination="msA-6e-LXH" id="kyU-YV-mVs"/>
+                        <outlet property="formButtonSend" destination="R7h-IP-tlj" id="uxT-pL-fTl"/>
+                        <outlet property="formButtonWho" destination="DXx-Dd-9jH" id="7nG-Ch-NTd"/>
+                        <outlet property="formTableViewUsers" destination="Qio-aH-fhh" id="3vW-Vy-yDk"/>
+                        <outlet property="formTextFieldMessage" destination="8cB-CJ-ucr" id="cBa-lC-rdF"/>
+                        <outlet property="formTextFieldNickname" destination="nLQ-Eu-fCj" id="fZi-GV-3ry"/>
+                        <outlet property="formTextFieldPassword" destination="tMW-Rt-9KN" id="pv4-iG-CB8"/>
+                        <outlet property="formTextViewChat" destination="Qrq-BC-NgN" id="p2g-pN-087"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="353"/>
+        </scene>
+    </scenes>
+</document>
